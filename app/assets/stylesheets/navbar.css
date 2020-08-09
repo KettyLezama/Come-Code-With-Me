@@ -1,0 +1,14 @@
+.navbar {
+  background-color: #F1FAEE;
+  border-bottom-color: rgba(214,214,214,0.5);
+  box-shadow: 0 5px 8px -6px #999;
+}
+
+.navbar-item {
+  font-variant-caps: all-small-caps;
+  font-size: 2em;
+}
+
+.flash {
+  margin-top: 2%;
+}

@@ -1,0 +1,11 @@
+#landing-page {
+  background-image: url(https://images.pexels.com/photos/4144294/pexels-photo-4144294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+#landing-title {
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+  text-shadow: 0px 4px 10px #000000;
+  text-align: center;
+  color: white;
+}
