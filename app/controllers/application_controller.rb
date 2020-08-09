@@ -24,4 +24,9 @@ class ApplicationController < ActionController::Base
 
     devise_parameter_sanitizer.permit(:sign_in, keys: [:email, :password])
   end
+
+  private
+  def after_sign_in_path_for(resource)
+     "/dashboard"
+  end
 end
