@@ -3,7 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import LandingPage from './LandingPage';
 import LearnMorePage from './LearnMorePage';
-import DashboardIndexPage from './DashboardIndexPage';
+import RegisteredLandingPage from './RegisteredLandingPage';
+import MyProfileComponent from './MyProfileComponent';
 
 export const App = (props) => {
   return (
@@ -11,7 +12,7 @@ export const App = (props) => {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/learn-more" component={LearnMorePage} />
-        <Route exact path="/dashboard" component={DashboardIndexPage} />
+        <Route exact path="/dashboard" component={RegisteredLandingPage} />
       </Switch>
     </BrowserRouter>
   )
