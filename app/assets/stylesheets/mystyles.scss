@@ -11,18 +11,19 @@ $celadon-blue: #457B9D;
 $prussian-blue: #1D3557;
 // Add pink and its invert
 $pink: #ffb3b3;
-$pink-invert: #fff;
+$imperial-red-invert: #fff;
 // Add a serif family
 $family-serif: 'Raleway', sans-serif;
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
 $primary: $imperial-red;
-$primary-invert: $pink-invert;
+$primary-invert: $imperial-red-invert;
 // Use the existing orange as the danger color
 $danger: $orange;
 // Use the new serif family
 $family-primary: $family-serif;
+$link: $pink;
 
 // 4. Setup your Custom Colors
 $linkedin: #0077b5;
