@@ -11,9 +11,11 @@ const DashboardComponent = ({userList}) => {
   });
   
   return (
-    <div id="card-container" className="container">
-      <div className="columns is-multiline">
-        {listUsers}
+    <div className="dashboard container is-widescreen">
+      <div id="card-container" className="container">
+        <div className="columns is-multiline">
+          {listUsers}
+        </div>
       </div>
     </div>
   )

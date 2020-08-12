@@ -1,0 +1,37 @@
+.profile.container {
+  background-image: url(https://images.pexels.com/photos/4065905/pexels-photo-4065905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: 100%;
+  margin-bottom: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.profile-section {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 5%;
+  border-radius: 10px;
+  background-color: #A8DADC;
+}
+
+.profile-section.top {
+  margin-top: 2%;
+}
+
+.profile-section.middle {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.profile-section.bottom {
+  margin-bottom: 2%;
+}
+
+.horizontal-rule {
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: white;
+  height: 1px;
+}
+
+

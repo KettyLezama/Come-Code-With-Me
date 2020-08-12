@@ -14,4 +14,7 @@ class User < ApplicationRecord
   validates :bio, length: { maximum: 500 }
   validates :programming_lang, presence: true
   validates :role, presence: true
+
+  has_many :connections, dependent: :destroy
+  has_many :interests, through: :connections
 end

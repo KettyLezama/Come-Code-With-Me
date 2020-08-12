@@ -23,7 +23,7 @@ $primary-invert: $imperial-red-invert;
 $danger: $orange;
 // Use the new serif family
 $family-primary: $family-serif;
-$link: $pink;
+$link: $celadon-blue;
 
 // 4. Setup your Custom Colors
 $linkedin: #0077b5;
@@ -50,6 +50,7 @@ $addColors: (
   ),
 );
 $colors: map-merge($colors, $addColors);
+$box-background-color: $powder-blue;
 
 // 6. Import the rest of Bulma
 @import "../../../node_modules/bulma/bulma.sass";
