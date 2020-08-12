@@ -131,3 +131,9 @@ mentor_3 = User.create(
   technology: "Rails",
   role: "mentor"
 )
+
+connection_1 = Connection.create_reciprocal_for_ids(1, 8)
+connection_2 = Connection.create_reciprocal_for_ids(8, 2)
+connection_3 = Connection.create_reciprocal_for_ids(8, 4)
+connection_4 = Connection.create_reciprocal_for_ids(8, 5)
+
