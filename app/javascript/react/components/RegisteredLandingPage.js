@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import DashboardComponent from './DashboardComponent';
 import MyProfileComponent from './MyProfileComponent';
-import MutualConnectsComponent from './MutualConnectsComponent';
+import ConnectionsComponent from './ConnectionsComponent';
 
 const RegisteredLandingPage = (props) => {
   const [getUsers, setUsers] = useState([]);
@@ -22,7 +22,6 @@ const RegisteredLandingPage = (props) => {
       })
       .then((response) => response.json())
       .then((body) => {
-        debugger;
         setUsers(body.users);
         setCurrentUser(body.current_user);
       })
@@ -34,7 +33,7 @@ const RegisteredLandingPage = (props) => {
   }
 
   let displayComponent;
-  let dashboardClass = '', profileClass = '', mutualConnectsClass = '';
+  let dashboardClass = '', profileClass = '', ConnectionsClass = '';
   if (getTabId === 'dashboard') {
     dashboardClass = 'is-active';
     displayComponent = <DashboardComponent userList={getUsers}/>
@@ -42,8 +41,8 @@ const RegisteredLandingPage = (props) => {
     profileClass = 'is-active';
     displayComponent = <MyProfileComponent currentUser={getCurrentUser}/>
   } else if (getTabId === 'mutual-connects') {
-    mutualConnectsClass = 'is-active';
-    displayComponent = <MutualConnectsComponent currentUser={getCurrentUser}/>
+    ConnectionsClass = 'is-active';
+    displayComponent = <ConnectionsComponent/>
   }
   
   return (
@@ -65,10 +64,10 @@ const RegisteredLandingPage = (props) => {
               </a>
             </li>
 
-            <li id="mutual-connects" className={mutualConnectsClass} onClick={() => setActiveTab('mutual-connects')}>
+            <li id="mutual-connects" className={ConnectionsClass} onClick={() => setActiveTab('mutual-connects')}>
               <a>
                 <span className="icon is-small"><i className="far fa-handshake" aria-hidden="true"></i></span>
-                <span>Mutual Connects</span>
+                <span>Connections</span>
               </a>
             </li>
           </ul>

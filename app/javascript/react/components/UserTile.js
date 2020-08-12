@@ -13,10 +13,15 @@ const UserTile = ({userData}) => {
           </div>
 
           <div className="card-content">
+            <div className="overlay">
+              <div className="text">
+                <Link to={`/users/${userData.id}`}>View Profile</Link>
+              </div>
+            </div>
+
             <div className="media">
               <div className="media-content">
                 <p className="title is-4">{userData.first_name}</p>
-                <Link to={`/users/${userData.id}`}>View Profile</Link>
               </div>
             </div>
 

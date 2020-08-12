@@ -12,3 +12,8 @@
 .flash {
   margin-top: 2%;
 }
+
+#welcome-user {
+  margin-right: 25px;
+  font-size: 24px;
+}
