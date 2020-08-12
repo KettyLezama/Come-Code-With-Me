@@ -15,7 +15,10 @@ const UserTile = ({userData}) => {
           <div className="card-content">
             <div className="overlay">
               <div className="text">
-                <Link to={`/users/${userData.id}`}>View Profile</Link>
+                <Link to={{
+                  pathname: `/users/${userData.id}`,
+                  state: userData
+                }}>View Profile</Link>
               </div>
             </div>
 
