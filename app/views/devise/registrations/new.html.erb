@@ -79,6 +79,13 @@
       <%= f.text_field :technology, autofocus: true, autocomplete: "technologies" %>
     </div>
 
+    <div class="radio-button">
+      <%= f.radio_button :role, 'mentee' %> 
+      <%= f.label :role, 'Mentee', :value => 'mentee' %>
+      <%= f.radio_button :role, 'mentor' %>
+      <%= f.label :role, 'Mentor', :value => 'mentor' %>
+    </div>
+
     <div class="actions">
       <%= f.submit "Sign up" %>
     </div>

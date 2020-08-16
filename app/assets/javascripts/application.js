@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require_tree .
 
+$(function(){
+   var flashDurationInSeconds = 5;
+   var flashContainerId = 'flash-messages';
+
+   function removeFlashMessages() {
+     $('#' + flashContainerId).remove();
+   }
+
+   setTimeout(removeFlashMessages, flashDurationInSeconds * 1000);
+})
+

@@ -14,7 +14,9 @@ const MyProfileComponent = ({currentUser}) => {
 
   return (
     <div className="profile container is-widescreen">
-      <button class={activeStyleClass} title="Disabled button" disabled>{activeStatus}</button>
+      <div className="buttons is-centered">
+        <button className={activeStyleClass} title="Disabled button" disabled>{activeStatus}</button>
+      </div>
 
       <section className="box profile-section top">
         <h1 className="title is-4">Personal Details</h1>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-const UserTile = ({userData}) => {
+const UserTile = ({userData, currentUser}) => {
   return (
     <>
       <div className="column is-3">
@@ -17,7 +17,10 @@ const UserTile = ({userData}) => {
               <div className="text">
                 <Link to={{
                   pathname: `/users/${userData.id}`,
-                  state: userData
+                  state: {
+                    userData: userData,
+                    currentUser: currentUser
+                  }
                 }}>View Profile</Link>
               </div>
             </div>

@@ -9,8 +9,12 @@ Rails.application.routes.draw do
 
   namespace :api do 
     namespace :v1 do
-      resources :users, only: [:index, :show]
-      resources :connections, only: [:index, :create, :destroy]
+      resources :users, only: [:index, :show] do
+        resources :connections, only: [:create, :destroy] do
+          resources :messages, only: [:index, :create]
+        end
+      end
+      resources :connections, only: [:index]
     end
   end
 end

@@ -137,3 +137,11 @@ connection_2 = Connection.create_reciprocal_for_ids(8, 2)
 connection_3 = Connection.create_reciprocal_for_ids(8, 4)
 connection_4 = Connection.create_reciprocal_for_ids(8, 5)
 
+Message.create_reciprocal_for_ids(1, 2, "Will this message appear on both sides?? This is a test! I should see this on my (Stephanie's) account and Priscila's account!", 1, 8)
+
+Message.create_reciprocal_for_ids(1, 2, "Hi Stephanie!", 8, 1)
+
+Message.create_reciprocal_for_ids(1, 2, "Hi Priscila! How are you?", 1, 8)
+
+Message.create_reciprocal_for_ids(1, 2, "I am well, thanks! I was interested in the programming languages section of your profile. What experience do you have with those languages?", 8, 1)
+

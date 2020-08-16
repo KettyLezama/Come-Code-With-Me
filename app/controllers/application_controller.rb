@@ -19,7 +19,8 @@ class ApplicationController < ActionController::Base
       :github_url,
       :bio,
       :programming_lang,
-      :technology
+      :technology,
+      :role
     ])
 
     devise_parameter_sanitizer.permit(:sign_in, keys: [:email, :password])
