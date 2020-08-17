@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_151827) do
+ActiveRecord::Schema.define(version: 2020_08_13_195007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,18 @@ ActiveRecord::Schema.define(version: 2020_08_11_151827) do
     t.index ["user_id"], name: "index_connections_on_user_id"
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.bigint "connection_id"
+    t.bigint "connection_inverse_id"
+    t.text "content", null: false
+    t.bigint "sender_id", null: false
+    t.bigint "receiver_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["connection_id"], name: "index_messages_on_connection_id"
+    t.index ["connection_inverse_id"], name: "index_messages_on_connection_inverse_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -32,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_08_11_151827) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url"
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.string "town", null: false
@@ -50,4 +63,5 @@ ActiveRecord::Schema.define(version: 2020_08_11_151827) do
   end
 
   add_foreign_key "connections", "users"
+  add_foreign_key "messages", "connections"
 end

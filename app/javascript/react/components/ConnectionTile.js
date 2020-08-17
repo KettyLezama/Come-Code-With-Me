@@ -1,12 +1,16 @@
 import React from 'react';
 
-const ConnectionTile = ({userData}) => {
+const ConnectionTile = ({userData, handleNameClick, selectedStatus}) => {
+
+  let value = "";
+  if (selectedStatus === true) {
+    value = "selected-name";
+  }
 
   return (
     <>
       <div className="box connection">
-        {/* Will become a link to messages pertaining to this connection. */}
-        <a>{userData.first_name}</a>
+        <a className={value} onClick={handleNameClick}>{userData.first_name}</a>
       </div>
     </>
   )

@@ -2,12 +2,20 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import DashboardComponent from './DashboardComponent';
 import MyProfileComponent from './MyProfileComponent';
-import ConnectionsComponent from './ConnectionsComponent';
+import ConnectionsContainer from './ConnectionsContainer';
 
 const RegisteredLandingPage = (props) => {
+
+  // props.match.params (look for query param which can be used to set default state of tabId )
+  let defaultTabId = "dashboard"
+
+  if (props.match.params.tabId){
+    defaultTabId == props.match.params.tabId
+  }
+
   const [getUsers, setUsers] = useState([]);
   const [getCurrentUser, setCurrentUser] = useState(null);
-  const [getTabId, setTabId] = useState('dashboard');
+  const [getTabId, setTabId] = useState(defaultTabId);
   
   useEffect(() => {
     fetch("/api/v1/users")
@@ -36,13 +44,13 @@ const RegisteredLandingPage = (props) => {
   let dashboardClass = '', profileClass = '', ConnectionsClass = '';
   if (getTabId === 'dashboard') {
     dashboardClass = 'is-active';
-    displayComponent = <DashboardComponent userList={getUsers}/>
+    displayComponent = <DashboardComponent userList={getUsers} currentUser={getCurrentUser} />
   } else if (getTabId === 'my-profile') {
     profileClass = 'is-active';
-    displayComponent = <MyProfileComponent currentUser={getCurrentUser}/>
-  } else if (getTabId === 'mutual-connects') {
+    displayComponent = <MyProfileComponent currentUser={getCurrentUser} />
+  } else if (getTabId === 'connections') {
     ConnectionsClass = 'is-active';
-    displayComponent = <ConnectionsComponent/>
+    displayComponent = <ConnectionsContainer />
   }
   
   return (
@@ -58,17 +66,17 @@ const RegisteredLandingPage = (props) => {
             </li>
 
             <li id="my-profile" className={profileClass} onClick={() => setActiveTab('my-profile')}>
-              <a>
+              <Link to={`/my-profile`}>
                 <span className="icon is-small"><i className="far fa-address-card" aria-hidden="true"></i></span>
-                <span>Your Profile</span>
-              </a>
+                <span>My Profile</span>
+              </Link>
             </li>
 
-            <li id="mutual-connects" className={ConnectionsClass} onClick={() => setActiveTab('mutual-connects')}>
-              <a>
+            <li id="connections" className={ConnectionsClass} onClick={() => setActiveTab('connections')}>
+              <Link to={`/connections`}>
                 <span className="icon is-small"><i className="far fa-handshake" aria-hidden="true"></i></span>
                 <span>Connections</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
