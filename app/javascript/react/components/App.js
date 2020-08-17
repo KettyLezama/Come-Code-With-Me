@@ -6,6 +6,7 @@ import LearnMorePage from './LearnMorePage';
 import RegisteredLandingPage from './RegisteredLandingPage';
 import MyProfileComponent from './MyProfileComponent';
 import UserProfilePage from './UserProfilePage';
+import ConnectionsContainer from './ConnectionsContainer';
 
 export const App = (props) => {
   return (
@@ -14,7 +15,11 @@ export const App = (props) => {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/learn-more" component={LearnMorePage} />
         <Route exact path="/dashboard" component={RegisteredLandingPage} />
+        <Route exact path="/my-profile" component={RegisteredLandingPage} />
+        <Route exact path="/connections" component={RegisteredLandingPage} />
         <Route exact path="/users/:id" component={UserProfilePage} />
+        <Route exact path="/chats" component={ConnectionsContainer} />
+        <Route exact path="/chats/:id" component={ConnectionsContainer} />
       </Switch>
     </BrowserRouter>
   )

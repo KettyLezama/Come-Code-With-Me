@@ -9,8 +9,8 @@ const RegisteredLandingPage = (props) => {
   // props.match.params (look for query param which can be used to set default state of tabId )
   let defaultTabId = "dashboard"
 
-  if (props.match.params.tabId){
-    defaultTabId == props.match.params.tabId
+  if (props.match.path){
+    defaultTabId == props.match.path.substring(1);
   }
 
   const [getUsers, setUsers] = useState([]);
@@ -66,17 +66,17 @@ const RegisteredLandingPage = (props) => {
             </li>
 
             <li id="my-profile" className={profileClass} onClick={() => setActiveTab('my-profile')}>
-              <a>
+              <Link to={`/my-profile`}>
                 <span className="icon is-small"><i className="far fa-address-card" aria-hidden="true"></i></span>
                 <span>My Profile</span>
-              </a>
+              </Link>
             </li>
 
             <li id="connections" className={ConnectionsClass} onClick={() => setActiveTab('connections')}>
-              <a>
+              <Link to={`/connections`}>
                 <span className="icon is-small"><i className="far fa-handshake" aria-hidden="true"></i></span>
                 <span>Connections</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -8,6 +8,10 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show
-    render json: User.find(params[:id])
+    if params[:id] == 'current'
+      render json: { user_id: current_user.id, first_name: current_user.first_name }
+    else
+      render json: User.find(params[:id])
+    end
   end
 end

@@ -1,9 +1,12 @@
 import React from 'react';
 
-const MessageTile = ({content}) => {
+const MessageTile = ({userFirstName, content}) => {
 
   return (
-    <p id="message-content">{content}</p>
+    <p>
+      <strong> {userFirstName}: </strong>
+      {content}
+    </p>
   )
 }
 

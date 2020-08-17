@@ -5,9 +5,9 @@ import MessagesContainer from './MessagesContainer';
 
 const ConnectionsContainer = () => {
   const [getConnections, setConnections] = useState([]);
-  const [getSelectedConnectionId, setSelectedConnectionId] = useState(null);
+  const [getSelectedConnectionId, setSelectedConnectionId] = useState(0);
   const [getUserInterests, setUserInterests] = useState([]);
-  const [getSelectedUserId, setSelectedUserId] = useState(null);
+  const [getSelectedUserId, setSelectedUserId] = useState(0);
   const [getMessages, setMessages] = useState([]);
   const [getSelectedUserMessages, setSelectedUserMessages] = useState([]);
 
@@ -33,12 +33,11 @@ const ConnectionsContainer = () => {
 
   const setSelectedUserInfo = (userId) => {
     setSelectedUserId(userId);
-    setSelectedUserMessages(getMessages.filter((message) => {
-      return message.receiver_id == userId || message.sender_id == userId  
-    }));
 
     getConnections.forEach((connection) => {
+      debugger;
       if (connection.interest_id === userId) {
+        debugger;
         setSelectedConnectionId(connection.id)
       }
     })
