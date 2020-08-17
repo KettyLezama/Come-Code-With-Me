@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_195007) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url"
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.string "town", null: false

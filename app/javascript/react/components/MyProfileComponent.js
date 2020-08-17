@@ -49,6 +49,10 @@ const MyProfileComponent = ({currentUser}) => {
         <h1><strong>Programming Language(s): </strong>{currentUser.programming_lang}</h1>
         <h1><strong>Technologies: </strong>{currentUser.technology}</h1>
       </section>
+
+      <div className="buttons is-centered">
+        <button className="edit button is-primary">Edit Profile</button>
+      </div>
     </div>
   )
 }

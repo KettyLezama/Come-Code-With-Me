@@ -14,6 +14,8 @@ export const App = (props) => {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/learn-more" component={LearnMorePage} />
         <Route exact path="/dashboard" component={RegisteredLandingPage} />
+        <Route exact path="/my-profile" component={RegisteredLandingPage} />
+        <Route exact path="/connections" component={RegisteredLandingPage} />
         <Route exact path="/users/:id" component={UserProfilePage} />
       </Switch>
     </BrowserRouter>

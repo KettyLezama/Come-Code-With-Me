@@ -11,6 +11,7 @@ mentee_1 = User.create(
   email: "stephanie.parker@gmail.com",
   password: "stephanie",
   password_confirmation: "stephanie",
+  img_url: "https://images.pexels.com/photos/3861439/pexels-photo-3861439.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   first_name: "Stephanie",
   last_name: "Parker",
   town: "Malden",
@@ -25,6 +26,7 @@ mentee_2 = User.create(
   email: "caroline.garcia@gmail.com",
   password: "caroline",
   password_confirmation: "caroline",
+  img_url: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   first_name: "Caroline",
   last_name: "Garcia",
   town: "Roslindale",
@@ -39,6 +41,7 @@ mentee_3 = User.create(
   email: "alison.smith@yahoo.com",
   password: "alison",
   password_confirmation: "alison",
+  img_url: "https://images.pexels.com/photos/3862600/pexels-photo-3862600.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   first_name: "Alison",
   last_name: "Smith",
   town: "Roslindale",
@@ -53,6 +56,7 @@ mentee_4 = User.create(
   email: "marianna.rivera@verizon.net",
   password: "marianna",
   password_confirmation: "marianna",
+  img_url: "https://images.pexels.com/photos/3856038/pexels-photo-3856038.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   first_name: "Marianna",
   last_name: "Rivera",
   town: "Holliston",
@@ -67,6 +71,7 @@ mentee_5 = User.create(
   email: "theresa.goldberg@gmail.com",
   password: "theresa",
   password_confirmation: "theresa",
+  img_url: "https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   first_name: "Theresa",
   last_name: "Goldberg",
   town: "Wellesley",
@@ -137,11 +142,11 @@ connection_2 = Connection.create_reciprocal_for_ids(8, 2)
 connection_3 = Connection.create_reciprocal_for_ids(8, 4)
 connection_4 = Connection.create_reciprocal_for_ids(8, 5)
 
-Message.create_reciprocal_for_ids(1, 2, "Will this message appear on both sides?? This is a test! I should see this on my (Stephanie's) account and Priscila's account!", 1, 8)
+Message.create_reciprocal_for_ids(1, 2, "Hi Priscila! How are you? I liked your profile!", 1, 8)
 
-Message.create_reciprocal_for_ids(1, 2, "Hi Stephanie!", 8, 1)
+Message.create_reciprocal_for_ids(1, 2, "Hi Stephanie! Thank you! I am doing well. Are you working on any of the technologies or languages I listed? :)", 8, 1)
 
-Message.create_reciprocal_for_ids(1, 2, "Hi Priscila! How are you?", 1, 8)
+Message.create_reciprocal_for_ids(1, 2, "Yes, but I am very new.", 1, 8)
 
-Message.create_reciprocal_for_ids(1, 2, "I am well, thanks! I was interested in the programming languages section of your profile. What experience do you have with those languages?", 8, 1)
+Message.create_reciprocal_for_ids(1, 2, "That's okay! What do you like about coding so far?", 8, 1)
 

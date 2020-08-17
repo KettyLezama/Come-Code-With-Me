@@ -4,8 +4,9 @@ Rails.application.routes.draw do
 
   get '/learn-more', to: 'homes#index'
   get '/dashboard' => "homes#index", :as => :user_root
+  get '/my-profile', to: 'homes#index'
+  get '/connections', to: 'homes#index'
   get '/users/:id', to: 'homes#index'
-  get '/mutual-connects', to: 'homes#index'
 
   namespace :api do 
     namespace :v1 do

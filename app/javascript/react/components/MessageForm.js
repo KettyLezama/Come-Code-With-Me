@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const MessageForm = ({selectedConnectionId, selectedUserId}) => {
-  debugger;
   const [getNotice, setNotice] = useState("");
   const [getMessageData, setMessageData] = useState({
     content: ""
@@ -56,8 +55,9 @@ const MessageForm = ({selectedConnectionId, selectedUserId}) => {
     <>
       <form className="messages-form" onSubmit={handleSubmit}>
         <label>
-          New Message:
-          <textarea
+          <strong>New Message:</strong>
+          <input
+            type="text"
             name="content"
             onChange={handleInputChange}
             value={getMessageData.content}
@@ -65,8 +65,6 @@ const MessageForm = ({selectedConnectionId, selectedUserId}) => {
         </label>
         <input type="submit" value="Send"/>
       </form>
-
-      <a href="/dashboard?tabId=connections">Refresh Page</a>
     </>
   )
 }
