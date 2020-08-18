@@ -1,6 +1,7 @@
 import React from 'react';
-import MessageTile from './MessageTile';
-import MessageForm from './MessageForm';
+import { Link } from 'react-router-dom';
+import MessageTile from '../components/MessageTile';
+import MessageForm from '../components/MessageForm';
 
 const MessagesContainer = ({selectedUserMessages, selectedConnectionId, selectedUserId}) => {
 
@@ -23,6 +24,8 @@ const MessagesContainer = ({selectedUserMessages, selectedConnectionId, selected
         selectedConnectionId={selectedConnectionId}
         selectedUserId={selectedUserId}
       />
+
+      <a href="/connections">Refresh</a>
     </div>
   )
 }

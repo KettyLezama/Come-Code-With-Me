@@ -4,10 +4,10 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import LearnMorePage from './LearnMorePage';
 import RegisteredLandingPage from './RegisteredLandingPage';
-import MyProfileComponent from './MyProfileComponent';
 import UserProfilePage from './UserProfilePage';
 
 export const App = (props) => {
+
   return (
     <BrowserRouter>
       <Switch>
@@ -20,6 +20,6 @@ export const App = (props) => {
       </Switch>
     </BrowserRouter>
   )
-}
+};
 
 export default App;

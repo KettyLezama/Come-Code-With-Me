@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ConnectionTile from './ConnectionTile';
+import ConnectionTile from '../components/ConnectionTile';
 import UserInterestsContainer from './UserInterestsContainer';
 import MessagesContainer from './MessagesContainer';
 

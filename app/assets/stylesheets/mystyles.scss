@@ -2,8 +2,6 @@
 @import "../../../node_modules/bulma/sass/utilities/initial-variables";
 @import "../../../node_modules/bulma/sass/utilities/functions";
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 
 // 2. Set your own initial variables
 $honeydew: #F1FAEE;
@@ -11,14 +9,13 @@ $imperial-red: #E63946;
 $powder-blue: #A8DADC;
 $celadon-blue: #457B9D;
 $prussian-blue: #1D3557;
-// Add pink and its invert
-$pink: #ffb3b3;
+
+$button-hover: #fc5762;
 $imperial-red-invert: #fff;
 // Add a serif family
 $family-serif: 'Raleway', sans-serif;
 
 // 3. Set the derived variables
-// Use the new pink as the primary color
 $primary: $imperial-red;
 $primary-invert: $imperial-red-invert;
 // Use the existing orange as the danger color

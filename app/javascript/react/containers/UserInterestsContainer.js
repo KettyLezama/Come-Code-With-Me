@@ -1,5 +1,5 @@
 import React from 'react';
-import ConnectionTile from './ConnectionTile';
+import ConnectionTile from '../components/ConnectionTile';
 
 const UserInterestsContainer = ({userConnections, userInterests, setSelectedUserInfo, selectedUserId}) => {
 

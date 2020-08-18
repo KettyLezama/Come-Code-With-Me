@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const MyProfileComponent = ({currentUser}) => {
+const MyProfilePage = ({currentUser}) => {
 
   let activeStatus;
   let activeStyleClass;
@@ -57,4 +57,4 @@ const MyProfileComponent = ({currentUser}) => {
   )
 }
 
-export default MyProfileComponent;
+export default MyProfilePage;
