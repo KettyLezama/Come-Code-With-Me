@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import DashboardComponent from './DashboardComponent';
-import MyProfileComponent from './MyProfileComponent';
-import ConnectionsContainer from './ConnectionsContainer';
+import DashboardContainer from '../containers/DashboardContainer';
+import MyProfilePage from './MyProfilePage';
+import ConnectionsContainer from '../containers/ConnectionsContainer';
 
 const RegisteredLandingPage = (props) => {
 
-  // props.match.params (look for query param which can be used to set default state of tabId )
   let defaultTabId = "dashboard"
 
-  if (props.match.params.tabId){
-    defaultTabId == props.match.params.tabId
+  if (props.match.path){
+    defaultTabId = props.match.path.substring(1);
   }
 
   const [getUsers, setUsers] = useState([]);
@@ -44,10 +43,10 @@ const RegisteredLandingPage = (props) => {
   let dashboardClass = '', profileClass = '', ConnectionsClass = '';
   if (getTabId === 'dashboard') {
     dashboardClass = 'is-active';
-    displayComponent = <DashboardComponent userList={getUsers} currentUser={getCurrentUser} />
+    displayComponent = <DashboardContainer userList={getUsers} currentUser={getCurrentUser} />
   } else if (getTabId === 'my-profile') {
     profileClass = 'is-active';
-    displayComponent = <MyProfileComponent currentUser={getCurrentUser} />
+    displayComponent = <MyProfilePage currentUser={getCurrentUser} />
   } else if (getTabId === 'connections') {
     ConnectionsClass = 'is-active';
     displayComponent = <ConnectionsContainer />
@@ -87,6 +86,6 @@ const RegisteredLandingPage = (props) => {
       </section>
     </>
   )
-}
+};
 
 export default RegisteredLandingPage;

@@ -1,0 +1,58 @@
+#card-container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.card {
+  border-radius: 20px;
+  height: 100%;
+}
+
+.column:hover .overlay {
+  border-radius: 20px;
+  opacity: 1;
+}
+
+.view-profile-link {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-variant-caps: all-small-caps;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #A8DADC;
+}
+
+.card-image .default {
+  padding: 25%;
+  background-color: #F1FAEE;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-image {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.user-image {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}

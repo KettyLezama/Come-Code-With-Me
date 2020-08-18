@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import UserTile from './UserTile';
+import UserTile from '../components/UserTile';
 
-const DashboardComponent = ({userList, currentUser}) => {
+const DashboardContainer = ({userList, currentUser}) => {
 
   const listUsers = userList.map((user) => {
     return (
       <UserTile key={user.id} userData={user} currentUser={currentUser} />
-    );
+    )
   });
 
   let header;
@@ -20,7 +20,7 @@ const DashboardComponent = ({userList, currentUser}) => {
   }
   
   return (
-    <div className="dashboard container is-widescreen">
+    <div id="dashboard-container" className="container is-widescreen">
       <div id="card-container" className="container">
         <h1 id="dashboard-header">{header}</h1>
         <div className="columns is-multiline">
@@ -31,4 +31,4 @@ const DashboardComponent = ({userList, currentUser}) => {
   )
 }
 
-export default DashboardComponent;
+export default DashboardContainer;

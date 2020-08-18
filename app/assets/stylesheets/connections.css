@@ -26,10 +26,6 @@
   flex-direction: column;
 }
 
-.messages-form {
-  /* background-color: gray; */
-}
-
 .box.connection {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;

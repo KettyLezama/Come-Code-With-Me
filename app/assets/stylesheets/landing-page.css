@@ -1,8 +1,18 @@
-#landing-page {
+#landing-page-hero {
   background-image: url(https://images.pexels.com/photos/4144294/pexels-photo-4144294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
 }
 
+#landing-title-container {
+  text-align: center;
+  margin-bottom: 5%;
+  padding: 2%;
+}
+
 #landing-title {
+  margin-left: 23%;
+  margin-right: 23%;
+  padding: 1%;
+  padding-top: 0px;
   font-variant-caps: all-small-caps;
   font-size: 3vmax;
   letter-spacing: .20em;
@@ -10,32 +20,8 @@
                0px 4px 10px #000000;
   text-align: center;
   color: white;
-  padding: 1%;
-  padding-top: 0px;
-  margin-left: 23%;
-  margin-right: 23%;
 }
 
-.landing-title.container {
-  text-align: center;
-  margin-bottom: 5%;
-  padding: 2%;
-}
-
-.learn-more.button {
+#learn-more-button {
   font-variant-caps: all-small-caps;
-}
-
-.button {
-  font-variant-caps: all-small-caps;
-  letter-spacing: .20em;
-  font-weight: bolder;
-}
-
-#flash-messages {
-  font-variant-caps: all-small-caps;
-  text-align: center;
-  font-size: 2em;
-  font-weight: bold;
-  color: #457B9D;
 }
