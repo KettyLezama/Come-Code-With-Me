@@ -17,7 +17,7 @@ to meet in person.
 For the deployed application, visit [here](http://come-code-with-me.herokuapp.com/).
 
 ## Author
-- Ketty Lezama
+Ketty Lezama
 
 ## Built With
 - [Ruby on Rails](https://guides.rubyonrails.org/v5.2/)
@@ -30,6 +30,9 @@ For the deployed application, visit [here](http://come-code-with-me.herokuapp.co
 - Rails: 5.2.4.3
 - PostgreSQL 12: 2.3.5
 - Bulma: 0.9.0
+
+
+### Getting Started
 
 ###### Clone The Repository
 ```
