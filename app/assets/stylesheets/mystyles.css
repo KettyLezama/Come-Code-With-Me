@@ -307,7 +307,7 @@ a {
   a strong {
     color: currentColor; }
   a:hover {
-    color: #fff; }
+    color: #363636; }
 
 code {
   background-color: whitesmoke;
@@ -8165,5 +8165,5 @@ a.has-text-github:hover, a.has-text-github:focus {
       padding: 18rem 1.5rem; } }
 
 .footer {
-  background-color: #fafafa;
-  padding: 3rem 1.5rem 6rem; }
+  background-color: #A8DADC;
+  padding: 1%; }

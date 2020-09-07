@@ -1,3 +1,15 @@
+#learn-more-page-hero {
+  background-image: url(https://images.pexels.com/photos/4050296/pexels-photo-4050296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: 100%;
+}
+
 #learn-more-container {
-  padding-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  background-color: #F1FAEE;
+  height: 75vmin;
+  opacity: 0.7;
+  border-style: solid;
+  border-width: thin;
+  border-color: #ADD79F;
 }
