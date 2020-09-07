@@ -40,7 +40,7 @@
   background-color: #A8DADC;
 }
 
-.card-image .default {
+.card-image.default {
   padding: 25%;
   background-color: #F1FAEE;
   border-top-left-radius: 20px;
