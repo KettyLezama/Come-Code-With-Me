@@ -7,7 +7,6 @@ class Connection < ApplicationRecord
   def self.create_reciprocal_for_ids(user_id, interest_id)
     user_connection = Connection.create(user_id: user_id, interest_id: interest_id)
     interest_connection = Connection.create(user_id: interest_id, interest_id: user_id)
-    [user_connection, interest_connection]
   end
 
   def self.destroy_reciprocal_for_ids(user_id, interest_id)
