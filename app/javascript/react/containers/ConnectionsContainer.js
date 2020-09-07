@@ -34,7 +34,8 @@ const ConnectionsContainer = () => {
   const setSelectedUserInfo = (userId) => {
     setSelectedUserId(userId);
     setSelectedUserMessages(getMessages.filter((message) => {
-      return message.receiver_id == userId || message.sender_id == userId  
+      debugger;
+      return message.receiver_id === userId || message.sender_id === userId  
     }));
 
     getConnections.forEach((connection) => {

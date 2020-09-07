@@ -23,7 +23,7 @@ const MessageForm = ({selectedConnectionId, selectedUserId}) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    
     if (readyToSubmit()) {
       fetch(`/api/v1/users/${selectedUserId}/connections/${selectedConnectionId}/messages`, {
         method: "POST",
@@ -52,20 +52,18 @@ const MessageForm = ({selectedConnectionId, selectedUserId}) => {
   }
 
   return (
-    <>
-      <form className="messages-form" onSubmit={handleSubmit}>
-        <label>
-          <strong>New Message:</strong>
-          <input
-            type="text"
-            name="content"
-            onChange={handleInputChange}
-            value={getMessageData.content}
-          />
-        </label>
-        <input type="submit" value="Send"/>
-      </form>
-    </>
+    <form className="messages-form" onSubmit={handleSubmit}>
+      <label>
+        <strong>New Message:</strong>
+        <input
+          type="text"
+          name="content"
+          onChange={handleInputChange}
+          value={getMessageData.content}
+        />
+      </label>
+      <input type="submit" value="Send"/>
+    </form>
   )
 }
 
