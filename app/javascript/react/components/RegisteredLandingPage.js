@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import DashboardContainer from '../containers/DashboardContainer';
 import MyProfilePage from './MyProfilePage';
 import ConnectionsContainer from '../containers/ConnectionsContainer';
 
 const RegisteredLandingPage = (props) => {
 
-  let defaultTabId = "dashboard"
-
-  if (props.match.path){
-    defaultTabId = props.match.path.substring(1);
-  }
+  const location = useLocation();
+  const defaultTabId = location.pathname.substring(1) || "dashboard";
 
   const [getUsers, setUsers] = useState([]);
   const [getCurrentUser, setCurrentUser] = useState(null);

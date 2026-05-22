@@ -1,3 +1,3 @@
-const { environment } = require('@rails/webpacker')
+const { webpackConfig, merge } = require('shakapacker')
 
-module.exports = environment
+module.exports = merge({}, webpackConfig)

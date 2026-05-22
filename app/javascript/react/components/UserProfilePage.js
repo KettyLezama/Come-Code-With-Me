@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { useLocation, useParams } from "react-router-dom";
 
 const UserProfilePage = (props) => {
   const [getNotice, setNotice] = useState("");
   const [getConnectedStatus, setConnectedStatus] = useState(false);
   const [getConnectionId, setConnectionId] = useState(null);
 
-  const userData = props.location.state.userData;
-  const currentUser = props.location.state.currentUser;
-  const userId = props.match.params.id
+  const location = useLocation();
+  const { id: userId } = useParams();
+  const userData = location.state?.userData;
+  const currentUser = location.state?.currentUser;
 
   useEffect(() => {
     fetch("/api/v1/connections")
