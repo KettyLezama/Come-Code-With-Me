@@ -5,6 +5,8 @@ import MessageForm from '../components/MessageForm';
 
 const MessagesContainer = ({selectedUserMessages, selectedConnectionId, selectedUserId}) => {
 
+  debugger;
+
   const displayMessages = selectedUserMessages.map((message) => {
     return (
       <MessageTile

@@ -1,38 +1,23 @@
 import React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 
 import App from '../react/components/App'
-import RedBox from 'redbox-react'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0)
 
-  if ($navbarBurgers.length > 0) {
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
+  $navbarBurgers.forEach(el => {
+    el.addEventListener('click', () => {
+      const target = el.dataset.target
+      const $target = document.getElementById(target)
+      el.classList.toggle('is-active')
+      $target.classList.toggle('is-active')
+    })
+  })
 
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-      });
-    });
-  }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  let reactElement = document.getElementById('app')
-
+  const reactElement = document.getElementById('app')
   if (reactElement) {
-    if(window.railsEnv && window.railsEnv === 'development'){
-      try {
-        render(<App />, reactElement)
-      } catch (e) {
-        render(<RedBox error={e} />, reactElement)
-      }
-    }
-    else {
-      render(<App />, reactElement)
-    }
+    const root = createRoot(reactElement)
+    root.render(<App />)
   }
 })

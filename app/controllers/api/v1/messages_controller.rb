@@ -9,8 +9,8 @@ class Api::V1::MessagesController < ApplicationController
   
   def create
     sender_id = current_user.id
-    receiver_id = params[:user_id]
-    connection_id = params[:connection_id]
+    receiver_id = params[:user_id].to_i
+    connection_id = params[:connection_id].to_i
     connection_inverse_id = Connection.find_by(user_id: receiver_id, interest_id: current_user.id).id
     content = params[:content]
 

@@ -25,3 +25,11 @@
 #learn-more-button {
   font-variant-caps: all-small-caps;
 }
+
+.footer {
+  text-align: center;
+}
+
+#footer-content {
+  display: inline;
+}

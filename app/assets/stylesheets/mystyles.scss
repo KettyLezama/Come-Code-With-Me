@@ -50,6 +50,8 @@ $addColors: (
 );
 $colors: map-merge($colors, $addColors);
 $box-background-color: $powder-blue;
+$footer-background-color: $powder-blue;
+$footer-padding: 1%;
 
 // 6. Import the rest of Bulma
 @import "../../../node_modules/bulma/bulma.sass";
